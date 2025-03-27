@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love Envelope</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="background-upload-container">
+        <input type="file" id="backgroundUpload" accept="image/*" style="display:none;">
+        <button id="changeBackgroundBtn" class="change-background-btn">Change Background</button>
+    </div>
+
+    <div class="container">
+        <div class="envelope" id="envelope">
+            <div class="envelope-front">
+                <h1>Open with love</h1>
+            </div>
+            <div class="envelope-inside">
+                <div class="options">
+                    <button class="option-btn" data-mood="miss">I Miss You</button>
+                    <button class="option-btn" data-mood="laugh">I Need a Laugh</button>
+                    <button class="option-btn" data-mood="comfort">Comfort Me</button>
+                    <button class="option-btn" data-mood="motivation">I Need Some Motivation</button>
+                </div>
+            </div>
+        </div>
+        <div class="message-display" id="messageDisplay">
+            <div class="message-content" id="messageContent"></div>
+            <div class="voice-message-controls">
+                <button id="recordVoiceBtn" class="voice-btn">🎤 Record Voice Message</button>
+                <audio id="voiceMessagePlayer" controls style="display:none;"></audio>
+            </div>
+            <button id="backBtn" class="back-btn">Back to Envelope</button>
+        </div>
+    </div>
+
+    <script src="scripts/messages.js"></script>
+    <script src="scripts/typing-effect.js"></script>
+    <script src="scripts/voice-recorder.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
