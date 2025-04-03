@@ -39,9 +39,24 @@ class MusicPlayer {
                 src: "music/next-to-you.mp3"
             },
             {
+                title: "Love Me Like That",
+                artist: "Sam Kim",
+                src: "music/love-me-like-that.mp3"
+            },
+            {
+                title: "LMLY",
+                artist: "Jackson Wang",
+                src: "music/lmly.mp3"
+            },
+            {
                 title: "Is This Love",
                 artist: "XG",
                 src: "music/is-this-love.mp3"
+            },
+            {
+                title: "HSKT",
+                artist: "LeeHi",
+                src: "music/hskt.mp3"
             },
             {
                 title: "Fire",
