@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     countdown.start();
 
+    // Initialize Music Player
+    const musicPlayer = new MusicPlayer();
+
     // Typing Effect Initialization
     const typingEffect = new TypingEffect(messageContent);
 
@@ -49,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Heart Animation Function (from previous implementation)
+    // Heart Animation Function
     function createHeart() {
         const heart = document.createElement('div');
         heart.classList.add('heart');
