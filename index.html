@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Love Envelope</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
     <div class="background-upload-container">
         <input type="file" id="backgroundUpload" accept="image/*" style="display:none;">
         <button id="changeBackgroundBtn" class="change-background-btn">Change Background</button>
+    </div>
+
+    <!-- New countdown display -->
+    <div class="countdown-container" id="countdownContainer">
+        <h2>Time until we meet again:</h2>
+        <div class="countdown-timer">
+            <div class="countdown-item">
+                <span id="days">00</span>
+                <span class="label">Days</span>
+            </div>
+            <div class="countdown-item">
+                <span id="hours">00</span>
+                <span class="label">Hours</span>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes">00</span>
+                <span class="label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds">00</span>
+                <span class="label">Seconds</span>
+            </div>
+        </div>
     </div>
 
     <div class="container">
@@ -39,6 +64,8 @@
     <script src="scripts/messages.js"></script>
     <script src="scripts/typing-effect.js"></script>
     <script src="scripts/voice-recorder.js"></script>
+    <script src="scripts/countdown.js"></script>
     <script src="scripts/main.js"></script>
 </body>
+
 </html>
