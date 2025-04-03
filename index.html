@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Love Envelope</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <!-- Font Awesome for music player icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -14,7 +16,7 @@
         <button id="changeBackgroundBtn" class="change-background-btn">Change Background</button>
     </div>
 
-    <!-- New countdown display -->
+    <!-- Countdown display -->
     <div class="countdown-container" id="countdownContainer">
         <h2>Time until we meet again:</h2>
         <div class="countdown-timer">
@@ -35,6 +37,47 @@
                 <span class="label">Seconds</span>
             </div>
         </div>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <div class="music-info">
+            <div class="song-details">
+                <h3 id="songTitle">Our Songs</h3>
+                <p id="songArtist"></p>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="time-info">
+                    <span id="currentTime">0:00</span>
+                    <span id="totalTime">0:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="prevBtn" class="control-btn">
+                <i class="fas fa-backward"></i>
+            </button>
+            <button id="playBtn" class="control-btn play-btn">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="nextBtn" class="control-btn">
+                <i class="fas fa-forward"></i>
+            </button>
+            <div class="volume-container">
+                <i class="fas fa-volume-up"></i>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+            </div>
+        </div>
+        <div class="playlist-toggle" id="playlistToggle">
+            <i class="fas fa-list"></i> Playlist
+        </div>
+        <div class="playlist" id="playlist">
+            <!-- Playlist items will be added here via JavaScript -->
+        </div>
+        <audio id="audioPlayer"></audio>
     </div>
 
     <div class="container">
@@ -65,6 +108,7 @@
     <script src="scripts/typing-effect.js"></script>
     <script src="scripts/voice-recorder.js"></script>
     <script src="scripts/countdown.js"></script>
+    <script src="scripts/music-player.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 
