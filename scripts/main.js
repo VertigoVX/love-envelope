@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const backgroundUpload = document.getElementById('backgroundUpload');
     const changeBackgroundBtn = document.getElementById('changeBackgroundBtn');
     const voiceMessagePlayer = document.getElementById('voiceMessagePlayer');
-    
+
     // Countdown elements
     const daysElement = document.getElementById('days');
     const hoursElement = document.getElementById('hours');
     const minutesElement = document.getElementById('minutes');
     const secondsElement = document.getElementById('seconds');
-    
+
     // Initialize countdown to April 17, 2025
     const countdown = new Countdown(
         '2025-04-17T00:00:00',
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         minutesElement,
         secondsElement
     );
-    
+
     countdown.start();
 
     // Initialize Music Player
@@ -33,6 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Voice Recorder Initialization
     const voiceRecorder = new VoiceRecorder(voiceMessagePlayer);
+
+    // Todo List Initialization
+    const todoList = new TodoList();
 
     // Background Upload Functionality
     changeBackgroundBtn.addEventListener('click', () => {
@@ -119,19 +122,19 @@ function handleResponsiveLayout() {
     const musicPlayer = document.getElementById('musicPlayer');
     const countdownContainer = document.getElementById('countdownContainer');
     const container = document.querySelector('.container');
-    
+
     if (isMobile) {
         // Simplified player for mobile
         document.body.classList.add('mobile-view');
-        
+
         // Collapse playlist by default on mobile
         if (document.querySelector('.playlist.show-playlist')) {
             document.querySelector('.playlist').classList.remove('show-playlist');
         }
-        
+
         // Adjust container position
         container.style.marginTop = '100px';
-        
+
         // Consider hiding some controls when not in use
         const playlistToggle = document.getElementById('playlistToggle');
         playlistToggle.textContent = '♫'; // Simpler toggle icon
@@ -147,11 +150,11 @@ window.addEventListener('resize', handleResponsiveLayout);
 
 // Add touchstart events for better mobile interaction
 document.querySelectorAll('.option-btn, .control-btn, .back-btn').forEach(button => {
-    button.addEventListener('touchstart', function() {
+    button.addEventListener('touchstart', function () {
         this.classList.add('touch-active');
     });
-    
-    button.addEventListener('touchend', function() {
+
+    button.addEventListener('touchend', function () {
         this.classList.remove('touch-active');
     });
 });
